@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ceramisma | Élégance et Matière</title>
+  <style>
+    :root {
+      --gold: #C7A64B;
+      --ivory: #F8F5EE;
+      --stone: #9A9483;
+      --black-soft: #1C1C1C;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: var(--ivory);
+      color: var(--black-soft);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      background-color: var(--ivory);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav a {
+      color: var(--black-soft);
+      text-decoration: none;
+      margin-left: 40px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #fffaf0, var(--ivory));
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 20px auto;
+      font-size: 1.2em;
+      color: var(--stone);
+    }
+
+    .hero button {
+      margin-top: 30px;
+      background-color: var(--gold);
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #b7923d;
+    }
+
+    .shop {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .shop h2 {
+      font-size: 2em;
+      color: var(--gold);
+      margin-bottom: 50px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 15px 0 5px;
+      color: var(--black-soft);
+    }
+
+    .product p {
+      color: var(--stone);
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: var(--gold);
+      color: white;
+      padding: 10px 25px;
+      margin-bottom: 15px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #b7923d;
+    }
+
+    footer {
+      background-color: var(--black-soft);
+      color: var(--ivory);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo_ceramisma.png" alt="Logo Ceramisma" />
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Ceramisma</h1>
+    <p>L’art du carrelage, entre tradition et modernité. Découvrez nos collections élégantes conçues pour sublimer vos espaces.</p>
+    <button onclick="location.href='#shop'">Découvrir nos collections</button>
+  </section>
+
+  <section class="shop" id="shop">
+    <h2>Nos produits</h2>
+    <div class="product-grid">
+
+      <div class="product">
+        <img src="4E24C5BF-9271-400D-A231-C237155A6A7B.jpeg" alt="Décor rose">
+        <h3>Collection Rose Élégance</h3>
+        <p>Décors muraux raffinés pour salles de bain et cuisines.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="6B6820C2-154F-4828-848F-BD2B8ADBD89A.jpeg" alt="Plinthes noires et blanches">
+        <h3>Plinthes Classiques</h3>
+        <p>Designs intemporels en noir et blanc, finition brillante.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="7F297A36-99AC-428B-96B5-ABC6F65BAAD5.jpeg" alt="Plinthes dorées">
+        <h3>Collection Dorée</h3>
+        <p>Liserés or, éclat luxueux et détails précis.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="927C1F00-4F5C-4E87-8D0A-5068BC5E4101.jpeg" alt="Plinthes décoratives">
+        <h3>Plinthes Arabesques</h3>
+        <p>Motifs floraux inspirés de l’art oriental.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="964DE61E-6F63-4722-9AEC-64EEFCAEA959.jpeg" alt="Collection prestige">
+        <h3>Collection Prestige</h3>
+        <p>Finitions miroir, reflets subtils et allure élégante.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="11103437-ABBC-4131-BBA9-148F7FD842B6.jpeg" alt="Plinthes grecques">
+        <h3>Motif Grec Doré</h3>
+        <p>Inspiré des frises antiques, revisité avec élégance.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="C40DC585-C9A3-4FF6-9FC3-7B9FE60D802C.jpeg" alt="Lignes dorées">
+        <h3>Collection Gold Line</h3>
+        <p>Un mariage parfait entre modernité et tradition.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="CFFDE0B3-3397-4A95-A8D2-153FF209A6A2.jpeg" alt="Plinthes dorées fines">
+        <h3>Or et Lumière</h3>
+        <p>Brillance délicate et finitions soignées.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="D49547DF-CFFE-4CB2-A07B-6CA9A39C7F34.jpeg" alt="Plinthe décorée">
+        <h3>Plinthe Royale</h3>
+        <p>Détails luxueux, esprit architectural.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+      <div class="product">
+        <img src="F02A20A0-43E1-49A1-829A-63CFF509009F.jpeg" alt="Plinthes arabesques dorées">
+        <h3>Arabesques Dorées</h3>
+        <p>Textures précieuses et reflets dorés.</p>
+        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 Ceramisma — Tous droits réservés.</p>
+    <p><a href="mailto:contact@ceramisma.ma">contact@ceramisma.ma</a></p>
+  </footer>
+
+</body>
+</html>
