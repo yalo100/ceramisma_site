@@ -8,13 +8,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/ceramisma-icon.svg" />
+  <link rel="apple-touch-icon" href="assets/ceramisma-icon.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#accueil">Aller au contenu</a>
   <header class="site-header">
     <div class="container nav-wrapper">
-      <div class="logo" data-company> Ceramisma </div>
+      <a class="logo" href="#accueil" aria-label="Ceramisma">
+        <img src="assets/ceramisma-logo.svg" alt="Ceramisma" />
+        <span class="sr-only" data-company>Ceramisma</span>
+      </a>
       <nav class="main-nav" aria-label="Navigation principale">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
           <span></span>
@@ -387,7 +392,10 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <div class="logo" data-company> Ceramisma </div>
+        <a class="logo footer-logo" href="#accueil" aria-label="Ceramisma">
+          <img src="assets/ceramisma-logo.svg" alt="Ceramisma" />
+          <span class="sr-only" data-company>Ceramisma</span>
+        </a>
         <p data-about>Importateur engagé, Ceramisma accompagne les professionnels avec un sourcing rigoureux, un stock maîtrisé et un service après-vente fiable.</p>
       </div>
       <div>
