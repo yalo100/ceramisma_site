@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140" role="img" aria-label="Ceramisma">
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4d58d"/>
+      <stop offset="50%" stop-color="#caa24c"/>
+      <stop offset="100%" stop-color="#f2c96b"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="140" rx="24" fill="#0b0b0b"/>
+  <g transform="translate(28 18)">
+    <rect width="104" height="104" rx="20" fill="#101010"/>
+    <path fill="url(#gold)" d="M52 6l32 84H72l-7-20H39l-7 20H20L52 6zm0 26l-9 24h18l-9-24z"/>
+    <path fill="url(#gold)" opacity="0.7" d="M6 52h20L16 68H6zM78 52h20L88 68H78z"/>
+  </g>
+  <text x="170" y="92" fill="url(#gold)" font-family="'Inter', sans-serif" font-size="54" font-weight="600" letter-spacing="6">CERAMISMA</text>
+</svg>

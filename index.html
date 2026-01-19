@@ -3,256 +3,443 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ceramisma | Élégance et Matière</title>
-  <style>
-    :root {
-      --gold: #C7A64B;
-      --ivory: #F8F5EE;
-      --stone: #9A9483;
-      --black-soft: #1C1C1C;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: var(--ivory);
-      color: var(--black-soft);
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 60px;
-      background-color: var(--ivory);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    header img {
-      height: 60px;
-    }
-
-    nav a {
-      color: var(--black-soft);
-      text-decoration: none;
-      margin-left: 40px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--gold);
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(to bottom, #fffaf0, var(--ivory));
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      color: var(--gold);
-      letter-spacing: 2px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.2em;
-      color: var(--stone);
-    }
-
-    .hero button {
-      margin-top: 30px;
-      background-color: var(--gold);
-      color: white;
-      border: none;
-      padding: 15px 35px;
-      font-size: 1em;
-      cursor: pointer;
-      border-radius: 3px;
-      transition: background 0.3s;
-    }
-
-    .hero button:hover {
-      background-color: #b7923d;
-    }
-
-    .shop {
-      padding: 80px 10%;
-      text-align: center;
-    }
-
-    .shop h2 {
-      font-size: 2em;
-      color: var(--gold);
-      margin-bottom: 50px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-    }
-
-    .product {
-      background-color: white;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .product:hover {
-      transform: translateY(-5px);
-    }
-
-    .product img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
-
-    .product h3 {
-      margin: 15px 0 5px;
-      color: var(--black-soft);
-    }
-
-    .product p {
-      color: var(--stone);
-      font-size: 0.9em;
-      margin-bottom: 10px;
-    }
-
-    .whatsapp-btn {
-      display: inline-block;
-      background-color: var(--gold);
-      color: white;
-      padding: 10px 25px;
-      margin-bottom: 15px;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .whatsapp-btn:hover {
-      background-color: #b7923d;
-    }
-
-    footer {
-      background-color: var(--black-soft);
-      color: var(--ivory);
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-    }
-
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-    }
-
-  </style>
+  <title>Ceramisma | Import & Distribution</title>
+  <meta name="description" content="Importateur et distributeur de carrelage, plinthes murales et sanitaires pour professionnels et particuliers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="assets/ceramisma-icon.svg" />
+  <link rel="apple-touch-icon" href="assets/ceramisma-icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <header>
-    <img src="logo_ceramisma.png" alt="Logo Ceramisma" />
-    <nav>
-      <a href="#">Accueil</a>
-      <a href="#shop">Shop</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <a class="skip-link" href="#accueil">Aller au contenu</a>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="logo" href="#accueil" aria-label="Ceramisma">
+        <img src="assets/ceramisma-logo.svg" alt="Ceramisma" />
+        <span class="sr-only" data-company>Ceramisma</span>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#produits">Produits</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#realisations">Réalisations</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" data-whatsapp href="#">Devis WhatsApp</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Ceramisma</h1>
-    <p>L’art du carrelage, entre tradition et modernité. Découvrez nos collections élégantes conçues pour sublimer vos espaces.</p>
-    <button onclick="location.href='#shop'">Découvrir nos collections</button>
-  </section>
-
-  <section class="shop" id="shop">
-    <h2>Nos produits</h2>
-    <div class="product-grid">
-
-      <div class="product">
-        <img src="4E24C5BF-9271-400D-A231-C237155A6A7B.jpeg" alt="Décor rose">
-        <h3>Collection Rose Élégance</h3>
-        <p>Décors muraux raffinés pour salles de bain et cuisines.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Importateur & distributeur B2B</p>
+          <h1>Import & Distribution de Carrelage, Sanitaires et Habillage Mural</h1>
+          <p class="lead">Une sélection premium en stock, des collections internationales et un accompagnement technique pour vos chantiers professionnels et résidentiels.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-whatsapp href="#">Demander un devis</a>
+            <a class="btn btn-outline" href="#collections">Voir les collections</a>
+          </div>
+          <div class="hero-badges">
+            <span>Import Direct</span>
+            <span>Qualité Pro</span>
+            <span>Livraison</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80" alt="Showroom carrelage haut de gamme" />
+        </div>
       </div>
+    </section>
 
-      <div class="product">
-        <img src="6B6820C2-154F-4828-848F-BD2B8ADBD89A.jpeg" alt="Plinthes noires et blanches">
-        <h3>Plinthes Classiques</h3>
-        <p>Designs intemporels en noir et blanc, finition brillante.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+    <section id="produits" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Catégories produits</h2>
+          <p>Des références adaptées aux architectes, entrepreneurs et revendeurs.</p>
+        </div>
+        <div class="grid grid-3" id="categories">
+          <button class="card card-action reveal" data-category="carrelage-sol">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" /><rect x="13" y="4" width="7" height="7" /><rect x="4" y="13" width="7" height="7" /><rect x="13" y="13" width="7" height="7" /></svg>
+            </span>
+            <h3>Carrelage sol</h3>
+            <p>Formats grands et résistants pour trafic intense.</p>
+          </button>
+          <button class="card card-action reveal" data-category="carrelage-mural">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4z" /><path d="M4 11h10v8H4z" /><path d="M16 11h4v8h-4z" /></svg>
+            </span>
+            <h3>Carrelage mural</h3>
+            <p>Textures, reliefs et effets décoratifs tendance.</p>
+          </button>
+          <button class="card card-action reveal" data-category="plinthes">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v4H3z" /><path d="M3 14h18v4H3z" /></svg>
+            </span>
+            <h3>Plinthes / habillage</h3>
+            <p>Finitions coordonnées et protections murales.</p>
+          </button>
+          <button class="card card-action reveal" data-category="sanitaires">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v6H6z" /><path d="M8 10h8v6a4 4 0 0 1-8 0z" /></svg>
+            </span>
+            <h3>Sanitaires</h3>
+            <p>WC, lavabos, receveurs et solutions design.</p>
+          </button>
+          <button class="card card-action reveal" data-category="robinetterie">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3h4v4h-4v9H9v-9H5V7h4z" /></svg>
+            </span>
+            <h3>Robinetterie</h3>
+            <p>Collections premium pour projets résidentiels et hôteliers.</p>
+          </button>
+          <button class="card card-action reveal" data-category="accessoires">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" /><path d="M12 8v8M8 12h8" /></svg>
+            </span>
+            <h3>Accessoires</h3>
+            <p>Colles, joints et solutions de pose certifiées.</p>
+          </button>
+        </div>
       </div>
+    </section>
 
-      <div class="product">
-        <img src="7F297A36-99AC-428B-96B5-ABC6F65BAAD5.jpeg" alt="Plinthes dorées">
-        <h3>Collection Dorée</h3>
-        <p>Liserés or, éclat luxueux et détails précis.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+    <section id="collections" class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Collections & catalogue</h2>
+          <p>Une sélection de références en stock et sur commande.</p>
+        </div>
+        <div class="filters">
+          <div class="filter-group" role="group" aria-label="Filtrer les collections">
+            <button class="filter-btn is-active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="sol">Sol</button>
+            <button class="filter-btn" data-filter="mur">Mur</button>
+            <button class="filter-btn" data-filter="sanitaires">Sanitaires</button>
+            <button class="filter-btn" data-filter="plinthes">Plinthes</button>
+          </div>
+          <div class="search">
+            <input type="search" id="searchInput" placeholder="Rechercher une collection" aria-label="Rechercher une collection" />
+          </div>
+        </div>
+        <div class="grid grid-4" id="collectionGrid">
+          <article class="card product-card reveal" data-tags="sol" data-name="Marbre Blanc 60x60">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80" alt="Marbre Blanc 60x60" />
+            <div class="card-body">
+              <h3>Marbre Blanc 60x60</h3>
+              <p>Finition brillante · Sol · En stock</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="mur" data-name="Travertin Beige 30x90">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Travertin Beige 30x90" />
+            <div class="card-body">
+              <h3>Travertin Beige 30x90</h3>
+              <p>Finition mate · Mur · En stock</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="sol" data-name="Pierre Graphite 80x80">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80" alt="Pierre Graphite 80x80" />
+            <div class="card-body">
+              <h3>Pierre Graphite 80x80</h3>
+              <p>Finition mate · Sol · Sur commande</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="plinthes" data-name="Plinthe Marbre 10x120">
+            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=600&q=80" alt="Plinthe Marbre 10x120" />
+            <div class="card-body">
+              <h3>Plinthe Marbre 10x120</h3>
+              <p>Finition satinée · Plinthes · En stock</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="sanitaires" data-name="Vasque Halo">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="Vasque Halo" />
+            <div class="card-body">
+              <h3>Vasque Halo</h3>
+              <p>Céramique · Sanitaires · En stock</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="mur" data-name="Zellige Vert 10x10">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80" alt="Zellige Vert 10x10" />
+            <div class="card-body">
+              <h3>Zellige Vert 10x10</h3>
+              <p>Finition brillante · Mur · Sur commande</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="sol" data-name="Béton Sable 60x120">
+            <img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=600&q=80" alt="Béton Sable 60x120" />
+            <div class="card-body">
+              <h3>Béton Sable 60x120</h3>
+              <p>Finition mate · Sol · En stock</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="mur" data-name="Onyx Bronze 40x120">
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80" alt="Onyx Bronze 40x120" />
+            <div class="card-body">
+              <h3>Onyx Bronze 40x120</h3>
+              <p>Finition satinée · Mur · Sur commande</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="sanitaires" data-name="Receveur Slate 90x90">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=600&q=80" alt="Receveur Slate 90x90" />
+            <div class="card-body">
+              <h3>Receveur Slate 90x90</h3>
+              <p>Résine minérale · Sanitaires · En stock</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="plinthes" data-name="Plinthe Graphite 8x120">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80" alt="Plinthe Graphite 8x120" />
+            <div class="card-body">
+              <h3>Plinthe Graphite 8x120</h3>
+              <p>Finition mate · Plinthes · En stock</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="sol" data-name="Calacatta 120x120">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80" alt="Calacatta 120x120" />
+            <div class="card-body">
+              <h3>Calacatta 120x120</h3>
+              <p>Finition brillante · Sol · Sur commande</p>
+            </div>
+          </article>
+          <article class="card product-card reveal" data-tags="mur" data-name="Linéaire Sable 25x75">
+            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=600&q=80" alt="Linéaire Sable 25x75" />
+            <div class="card-body">
+              <h3>Linéaire Sable 25x75</h3>
+              <p>Relief · Mur · En stock</p>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="product">
-        <img src="927C1F00-4F5C-4E87-8D0A-5068BC5E4101.jpeg" alt="Plinthes décoratives">
-        <h3>Plinthes Arabesques</h3>
-        <p>Motifs floraux inspirés de l’art oriental.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Services dédiés aux professionnels</h2>
+          <p>Un accompagnement complet du sourcing à la livraison.</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="card reveal">
+            <h3>Import & sourcing</h3>
+            <p>Accès aux meilleures usines internationales, contrôle qualité et sélection premium.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Stock & disponibilité</h3>
+            <p>Stocks maîtrisés pour vos projets, livrables rapidement sur chantier.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Conseil technique</h3>
+            <p>Choix des formats, quantitatifs et solutions adaptées à chaque usage.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Livraison</h3>
+            <p>Logistique fiable et suivi dédié jusqu’à la réception finale.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="product">
-        <img src="964DE61E-6F63-4722-9AEC-64EEFCAEA959.jpeg" alt="Collection prestige">
-        <h3>Collection Prestige</h3>
-        <p>Finitions miroir, reflets subtils et allure élégante.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+    <section id="realisations" class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Réalisations</h2>
+          <p>Quelques projets clients.</p>
+        </div>
+        <div class="grid grid-3" id="portfolio">
+          <button class="portfolio-item reveal" data-lightbox="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80" alt="Salle de bain contemporaine" />
+          </button>
+          <button class="portfolio-item reveal" data-lightbox="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80" alt="Cuisine moderne" />
+          </button>
+          <button class="portfolio-item reveal" data-lightbox="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?auto=format&fit=crop&w=600&q=80" alt="Lobby hôtel" />
+          </button>
+          <button class="portfolio-item reveal" data-lightbox="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=600&q=80" alt="Espace showroom" />
+          </button>
+          <button class="portfolio-item reveal" data-lightbox="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=600&q=80" alt="Appartement résidentiel" />
+          </button>
+          <button class="portfolio-item reveal" data-lightbox="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="Salle de bain premium" />
+          </button>
+        </div>
       </div>
+    </section>
 
-      <div class="product">
-        <img src="11103437-ABBC-4131-BBA9-148F7FD842B6.jpeg" alt="Plinthes grecques">
-        <h3>Motif Grec Doré</h3>
-        <p>Inspiré des frises antiques, revisité avec élégance.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+    <section id="apropos" class="section">
+      <div class="container about-grid">
+        <div class="reveal">
+          <div class="section-heading">
+            <h2>À propos</h2>
+            <p data-about>Importateur engagé, Ceramisma accompagne les professionnels avec un sourcing rigoureux, un stock maîtrisé et un service après-vente fiable.</p>
+          </div>
+          <ul class="key-points">
+            <li>+15 ans d’expérience dans l’import de matériaux premium.</li>
+            <li>Partenaires internationaux certifiés.</li>
+            <li>Process qualité et SAV réactif.</li>
+          </ul>
+        </div>
+        <div class="about-card reveal">
+          <h3>Pourquoi Ceramisma ?</h3>
+          <p>Notre positionnement B2B vous garantit un suivi personnalisé, des délais sécurisés et une transparence totale sur la disponibilité.</p>
+          <div class="stats">
+            <div>
+              <strong>350+</strong>
+              <span>Références actives</span>
+            </div>
+            <div>
+              <strong>72h</strong>
+              <span>Livraison locale</span>
+            </div>
+            <div>
+              <strong>4.8/5</strong>
+              <span>Satisfaction client</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="product">
-        <img src="C40DC585-C9A3-4FF6-9FC3-7B9FE60D802C.jpeg" alt="Lignes dorées">
-        <h3>Collection Gold Line</h3>
-        <p>Un mariage parfait entre modernité et tradition.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+    <section id="temoignages" class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Témoignages</h2>
+          <p>Des partenaires qui nous font confiance.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="stars">★★★★★</div>
+            <p>“Un stock fiable et un suivi chantier impeccable.”</p>
+            <strong>R. El Idrissi — Entrepreneur</strong>
+          </div>
+          <div class="card reveal">
+            <div class="stars">★★★★★</div>
+            <p>“Collections premium qui séduisent nos clients architectes.”</p>
+            <strong>M. Haddad — Showroom</strong>
+          </div>
+          <div class="card reveal">
+            <div class="stars">★★★★★</div>
+            <p>“Equipe technique disponible et conseils précis.”</p>
+            <strong>A. Lahlou — Architecte</strong>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="product">
-        <img src="CFFDE0B3-3397-4A95-A8D2-153FF209A6A2.jpeg" alt="Plinthes dorées fines">
-        <h3>Or et Lumière</h3>
-        <p>Brillance délicate et finitions soignées.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div class="contact-card reveal">
+          <h2>Contact</h2>
+          <p>Parlons de votre projet, nous répondons rapidement.</p>
+          <ul class="contact-list">
+            <li><strong>Téléphone :</strong> <a data-phone href="#">+212661285876</a></li>
+            <li><strong>Email :</strong> <a data-email href="#">contact@ceramisma.ma</a></li>
+            <li><strong>Adresse :</strong> <span data-address>Zone industrielle, adresse à compléter.</span></li>
+            <li><strong>Horaires :</strong> <span data-hours>Lun - Sam : 08h30 - 18h30</span></li>
+          </ul>
+          <div class="contact-actions">
+            <a class="btn btn-primary" data-whatsapp href="#">WhatsApp</a>
+            <a class="btn btn-outline" data-phone href="#">Appeler</a>
+          </div>
+          <!-- Google Maps placeholder : remplacez l'URL ci-dessous par votre lien définitif -->
+          <!--
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18..."
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          -->
+        </div>
+        <form class="form-card reveal" id="contactForm" novalidate>
+          <h3>Demande de devis</h3>
+          <label>
+            Nom complet
+            <input type="text" name="name" required placeholder="Votre nom" />
+          </label>
+          <label>
+            Téléphone
+            <input type="tel" name="phone" required placeholder="Votre téléphone" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="Votre email" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" required placeholder="Décrivez votre besoin"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Envoyer</button>
+          <p class="form-message" role="status" aria-live="polite"></p>
+        </form>
       </div>
+    </section>
+  </main>
 
-      <div class="product">
-        <img src="D49547DF-CFFE-4CB2-A07B-6CA9A39C7F34.jpeg" alt="Plinthe décorée">
-        <h3>Plinthe Royale</h3>
-        <p>Détails luxueux, esprit architectural.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo footer-logo" href="#accueil" aria-label="Ceramisma">
+          <img src="assets/ceramisma-logo.svg" alt="Ceramisma" />
+          <span class="sr-only" data-company>Ceramisma</span>
+        </a>
+        <p data-about>Importateur engagé, Ceramisma accompagne les professionnels avec un sourcing rigoureux, un stock maîtrisé et un service après-vente fiable.</p>
       </div>
-
-      <div class="product">
-        <img src="F02A20A0-43E1-49A1-829A-63CFF509009F.jpeg" alt="Plinthes arabesques dorées">
-        <h3>Arabesques Dorées</h3>
-        <p>Textures précieuses et reflets dorés.</p>
-        <a href="https://wa.me/2126XXXXXXXX" class="whatsapp-btn">Commander</a>
+      <div>
+        <h4>Liens rapides</h4>
+        <ul>
+          <li><a href="#produits">Produits</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-
+      <div>
+        <h4>Réseaux</h4>
+        <ul class="socials">
+          <li><a data-social="linkedin" href="#">LinkedIn</a></li>
+          <li><a data-social="instagram" href="#">Instagram</a></li>
+          <li><a data-social="facebook" href="#">Facebook</a></li>
+        </ul>
+      </div>
     </div>
-  </section>
-
-  <footer id="contact">
-    <p>© 2025 Ceramisma — Tous droits réservés.</p>
-    <p><a href="mailto:contact@ceramisma.ma">contact@ceramisma.ma</a></p>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> <span data-company>Ceramisma</span>. Tous droits réservés.</span>
+    </div>
   </footer>
 
+  <a class="whatsapp-floating" data-whatsapp href="#" aria-label="Contacter sur WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <div class="modal" id="categoryModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Fermer">×</button>
+      <h3 id="modalTitle">Titre</h3>
+      <p id="modalDescription"></p>
+      <ul id="modalList"></ul>
+      <a class="btn btn-primary" data-whatsapp href="#">Demander un prix</a>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Fermer">×</button>
+    <img id="lightboxImage" alt="Agrandissement" />
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
