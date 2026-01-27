@@ -2,7 +2,7 @@ const SITE_CONFIG = {
   companyName: 'Ceramisma',
   phone: '+212661285876',
   whatsapp: '+212661285876',
-  address: 'Zone industrielle, adresse à compléter.',
+  address: 'Zone industrielle de Mediouna.',
   email: 'contact@ceramisma.ma',
   hours: 'Lun - Sam : 08h30 - 18h30',
   aboutText:
